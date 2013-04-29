@@ -1,8 +1,6 @@
 Canc3r::Application.routes.draw do
   root :to => "static#index"
 
-  mount RailPass::Engine, :at => "styleguide"
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

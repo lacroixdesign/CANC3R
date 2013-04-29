@@ -1,6 +1,24 @@
 Canc3r::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  # Sending Email :: Mandrill
+  config.action_mailer.default_url_options = { host: "www.canc3r.com" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :port           => '587',
+    :address        => 'smtp.mandrillapp.com',
+    :user_name      => ENV['MANDRILL_USERNAME'],
+    :password       => ENV['MANDRILL_APIKEY'],
+    :domain         => 'heroku.com',
+    :authentication => :plain
+  }
+
+  # Exceptions
+  config.middleware.use ExceptionNotifier,
+    :email_prefix         => "[ERROR] CANC3R",
+    :sender_address       => %{"Error - CANC3R" <errors@lacroixdesign.net>},
+    :exception_recipients => %w{michael@lacroixdesign.net, james@lacroixdesign.net}
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -10,7 +28,7 @@ Canc3r::Application.configure do
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets  = true
-config.static_cache_control = "public, max-age=31536000"
+  config.static_cache_control = "public, max-age=31536000"
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
@@ -38,10 +56,10 @@ config.static_cache_control = "public, max-age=31536000"
   # config.log_tags = [ :subdomain, :uuid ]
 
   # Use a different logger for distributed setups
-  # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
+  config.logger = Logger.new(STDOUT)
 
   # Use a different cache store in production
-  # config.cache_store = :mem_cache_store
+  config.cache_store = :file_store, "tmp/cache_store"
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
