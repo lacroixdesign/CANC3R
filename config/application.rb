@@ -11,8 +11,11 @@ end
 
 module Canc3r
   class Application < Rails::Application
-# Enable compiling assets on deploy for Heroku
-config.assets.initialize_on_precompile = false    # Settings in config/environments/* take precedence over those specified here.
+    # Settings in config/environments/* take precedence over those specified here.
+
+    # Enable compiling assets on deploy for Heroku
+    config.assets.initialize_on_precompile = false
+
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
