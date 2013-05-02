@@ -1,8 +1,11 @@
 // Basic Elements
 body {
   background: white;
+  color: $dark-grey;
   font-family: $typeface-sans;
+  text-align: center;
   text-shadow: 1px 1px 1px transparent;
+  font-size: 125%
 }
 
 a {
@@ -13,11 +16,23 @@ p, a, h1, h2, h3, h4, h5, label {
   font-family: inherit;
 }
 
-h1 {}
+h1 {
+  font-size: 2em;
+  font-family: $typeface-condensed;
+  text-transform: uppercase;
+}
 
-h2 {}
+h2 {
+  color: $grey;
+  font-size: 1em;
+  text-transform: uppercase;
+}
 
-h3 {}
+h3 {
+  font-size: 1em;
+  font-weight: 400;
+  font-style: italic;
+}
 
 h4 {}
 

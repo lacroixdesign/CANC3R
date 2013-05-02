@@ -1,0 +1,21 @@
+.m-footer {
+  padding: 1em 0;
+  background: $dark-grey;
+  color: $white;
+  text-align: center;
+
+  .footer-logo {
+    width: 6em;
+    margin: 0.5em auto;
+
+    img {
+      width: 100%;
+    }
+
+  } // .footer-logo
+
+  .footer-attribution {
+    font-size: 0.625em;
+  }
+
+} // .m-footer
