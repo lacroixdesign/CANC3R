@@ -1,5 +1,63 @@
 .m-intro {
+  padding: 4em 0;
   border-bottom: 0.5em solid $purple;
   background: $dark-grey image-url("canc3r_bg.jpg") no-repeat center center;
-  color: $white;
+  color: $off-white;
+  
+  .intro-tees {
+    ul {
+      display: block;
+      list-style: none;
+    }
+    li {
+      display: inline-block;
+      width: 33.33%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  
+  .intro-copy {
+    text-shadow: 0 -1px 1px rgba($dark-grey, 0.75);
+    @include media-ie($breakpoint-ipad) {
+      @include span-columns(10);
+        @include shift(1);
+        h1 {
+          font-size: 3em;
+        }
+    }
+     @include media-ie($breakpoint-desktop) {
+      @include span-columns(8);
+        @include shift(2);
+        h1 {
+          font-size: 4em;
+        }
+    } 
+    
+    .copy-social {
+      ul {
+        margin: 0 0 2em 0;
+        display: block;
+        list-style: none;
+      }
+      
+      li {
+        margin: 0 0.5em;
+        display: inline-block;
+        font-size: 1.25em;
+        
+        a {
+          color: $off-white;
+          
+          &:hover {
+            color: $orange;
+          }
+          &:active {
+            color: lighten($orange, 10%)
+          }
+        }
+      }
+    }  
+  }
 }

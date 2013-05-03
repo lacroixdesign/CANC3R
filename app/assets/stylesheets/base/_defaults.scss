@@ -1,15 +1,24 @@
 // Basic Elements
 body {
-  background: white;
+  background: $off-white;
   color: $dark-grey;
   font-family: $typeface-sans;
   text-align: center;
-  text-shadow: 1px 1px 1px transparent;
+  text-shadow: 1px 0px 1px $white;
   font-size: 125%
 }
 
-a {
+a, a:visited {
   @include transition (all 0.2s ease-in-out);
+  color: $orange;
+}
+
+a:hover {
+  color: darken($orange, 10%);
+}
+
+a:active {
+  color: lighten($orange, 10%);
 }
 
 p, a, h1, h2, h3, h4, h5, label {
@@ -17,6 +26,8 @@ p, a, h1, h2, h3, h4, h5, label {
 }
 
 h1 {
+  margin: 0;
+  line-height: 100%;
   font-size: 2em;
   font-family: $typeface-condensed;
   text-transform: uppercase;
@@ -34,9 +45,14 @@ h3 {
   font-style: italic;
 }
 
-h4 {}
+h4 {
+  font-size: 1em;
+  line-height: 100%;
+}
 
-h5 {}
+h5 {
+  margin: 1em 0;
+}
 
 h6 {}
 

@@ -8,24 +8,32 @@
       .nav-logo = image_tag "logo.svg", alt: "CANC3R"
       .nav-menu
         ul
-          li Mission
-          li Campaign
-          li Giving
-          li Connect
-          li Shop
+          li = link_to "Mission", "#mission"
+          li = link_to "Campaign", "#campaign"
+          li = link_to "Giving", "#giving"
+          li = link_to "Connect", "#connect"
+          li = link_to "Shop", "http://www.storenvy.com/CANC3Rtshirts", target: "_blank"
   
   / Intro
-  section#intro.m-intro
+  section#intro.m-intro(data-resize="1100")
     .l-constrained
       .intro-tees
         ul
-          li
-          li
-          li
+          li = image_tag "drum-tee.png", alt: "Drum Tee"
+          li = image_tag "drum-tee.png", alt: "Drum Tee"
+          li = image_tag "drum-tee.png", alt: "Drum Tee"
       .intro-copy
         h1 Let's Beat Cancer Together
-        p Cancer affects too many people that we care about. The expense of treatment is often too much for a single person to bear. However when we band together, we can help.
-        a href="#"Click to purchase one of the tees and help make a difference.
+        h4 Cancer affects too many people that we care about. The expense of treatment is often too much for a single person to bear. However when we band together, we can help.
+        h5
+          a href="#"Click to purchase one of the tees and help make a difference.
+        .copy-social
+          ul
+            li = link_to icon("e000"), "https://twitter.com/CANC3Rtshirts", target: "_blank"
+            li = link_to icon("e001"), "http://facebook.com", target: "_blank"
+            li = link_to icon("e002"), "http://instagram.com/CANC3Rtshirts", target: "_blank"
+            li= mail_to "jeremy@amb3r.com", icon("e005")
+        a#learn-more.btn href="#mission" Learn More
       
   / Mission
   section#mission.m-mission
