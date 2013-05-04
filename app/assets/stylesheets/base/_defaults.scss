@@ -29,29 +29,38 @@ h1 {
   margin: 0;
   line-height: 100%;
   font-size: 2em;
+  font-weight: 400;
   font-family: $typeface-condensed;
   text-transform: uppercase;
 }
 
 h2 {
+  margin-bottom: 1em;
   color: $grey;
+  display: inline-block;
+  border: 2px solid $grey;
+  border-left: none;
+  border-right: none;
   font-size: 1em;
   text-transform: uppercase;
+  line-height: 1.45;
 }
 
 h3 {
+  margin-bottom: 1.5em;
   font-size: 1em;
   font-weight: 400;
   font-style: italic;
 }
 
 h4 {
-  font-size: 1em;
-  line-height: 100%;
+  margin: 1em 0;
 }
 
 h5 {
-  margin: 1em 0;
+  font-size: 1em;
+  line-height: 100%;
+  font-weight: 400;  
 }
 
 h6 {}

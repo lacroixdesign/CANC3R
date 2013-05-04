@@ -24,10 +24,10 @@
           li = image_tag "drum-tee.png", alt: "Drum Tee"
       .intro-copy
         h1 Let's Beat Cancer Together
-        h4 Cancer affects too many people that we care about. The expense of treatment is often too much for a single person to bear. However when we band together, we can help.
-        h5
+        h5 Cancer affects too many people that we care about. The expense of treatment is often too much for a single person to bear. However when we band together, we can help.
+        h4
           a href="#"Click to purchase one of the tees and help make a difference.
-        .copy-social
+        .intro-social
           ul
             li = link_to icon("e000"), "https://twitter.com/CANC3Rtshirts", target: "_blank"
             li = link_to icon("e001"), "http://facebook.com", target: "_blank"
@@ -40,13 +40,14 @@
     .l-constrained
       h2 Mission
       .mission-statement
-        .statement-logo
-        .statement-copy
+        .mission-logo = image_tag "mission.svg", alt: "3 Part Mission"
+        .mission-parts
           ol
             li Finance Treatment
             li Raise Awareness
             li Fund Research
-      p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+      .mission-copy
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
   
   / Campaign
   section#campaign.m-campaign
@@ -54,8 +55,10 @@
       h2 Campaign
       h1 Chase Lovelace
       h3 Drummer - Superchick
-      .campaign-meta
-      .campagin-copy
+      .campaign-profile
+        .campaign-image = image_tag "chase.jpg", alt: "Chase Lovelace"
+        .campaign-meta
+      .campaign-copy
         p My name is Chase Damon Lovelace.  I was born in St. Louis, MO  and was raised in Olathe, KS.  Around the age of three I was singing and playing the tambourine in my church choir.  Fast forward and I’m now a musician/drummer.  As a musician I was fortunate enough to play drums professionally for three different bands since age 21; Stars Go Dim, Pillar, and the band Superchick from 2009 to 2012. This allowed me to perform all over the United States as well as 4 different continents.
         p In the summer of 2012 I was diagnosed with Stage 4, inoperable cholangiocarcinoma (or bile duct cancer) which arises from the tissue in the bile duct.  The bile duct is a 4 to 5 inch tube that connects the liver and gallbladder to the small intestines.  I am in the process of being treated at the Cancer Treatment Center of America in Tulsa.
         p I wouldn’t be “me” without my family and their tremendous support.  

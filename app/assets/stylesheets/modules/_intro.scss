@@ -6,6 +6,7 @@
   
   .intro-tees {
     ul {
+      margin: 0;
       display: block;
       list-style: none;
     }
@@ -15,6 +16,10 @@
     }
     img {
       width: 100%;
+    }
+    @include media-ie($breakpoint-desktop) {
+      @include span-columns(8);
+        @include shift(2);
     }
   }
   
@@ -35,7 +40,7 @@
         }
     } 
     
-    .copy-social {
+    .intro-social {
       ul {
         margin: 0 0 2em 0;
         display: block;
