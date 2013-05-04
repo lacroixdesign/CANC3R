@@ -1,5 +1,6 @@
 // Basic Elements
 body {
+  $max-width: 1200px;
   background: $off-white;
   color: $dark-grey;
   font-family: $typeface-sans;
@@ -54,7 +55,7 @@ h3 {
 }
 
 h4 {
-  margin: 1em 0;
+  margin: 0 0 0.5em 0;
 }
 
 h5 {

@@ -14,6 +14,37 @@
     }
   }
   
+  .campaign-meta {
+    color: $purple;
+    
+    a {
+      color: $purple;
+          
+      &:hover {
+        color: darken($purple, 10%);
+      }
+          
+      &:active {
+        color: lighten($purple, 10%)
+      }
+    }
+
+    
+    .campaign-social {
+      ul {
+        margin: 0.25em 0 2em 0;
+        display: block;
+        list-style: none;
+      }
+      
+      li {
+        margin: 0 0.5em;
+        display: inline-block;
+        
+      }
+    }      
+  }
+  
   .campaign-copy {
     @include media-ie($breakpoint-ipad) {
       @include span-columns(8);
