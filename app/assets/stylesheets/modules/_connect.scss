@@ -10,4 +10,45 @@
     border-right: none;
     color: $light-grey;
   }
+  
+  .connect-social {
+    ul {
+      margin: 0 0 2em 0;
+      display: block;
+      list-style: none;
+    }
+      
+    li {
+      margin: 0 0.5em;
+      display: inline-block;
+      font-size: 1.25em;
+        
+      a {
+        color: $off-white;
+          
+        &:hover {
+          color: $orange;
+        }
+        &:active {
+          color: lighten($orange, 10%)
+        }
+      } 
+    }
+  }
+  
+  .connect-details {
+    font-size: .75em;
+    
+    a {
+      color: $off-white;
+      
+      &:hover {
+        color: darken($off-white, 10%);
+      }
+      
+      &:active {
+        color: lighten($off-white, 10%)
+      }
+    }
+  }
 }

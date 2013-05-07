@@ -84,12 +84,12 @@
       .connect-signup
       .connect-social
         ul
-          li
-          li
-          li
-          li
-      .connect-meta
-        Privacy Policy • Contact Us
+          li = link_to icon("e000"), "https://twitter.com/CANC3Rtshirts", target: "_blank"
+          li = link_to icon("e001"), "http://facebook.com", target: "_blank"
+          li = link_to icon("e002"), "http://instagram.com/CANC3Rtshirts", target: "_blank"
+          li = mail_to "jeremy@amb3r.com", icon("e005")
+      .connect-details
+        #{link_to "Privacy Policy", "http://amb3r.com", target: "_blank"} • #{mail_to "jeremy@amb3r.com", "Contact Us"}
         
   / Footer
   section#footer.m-footer

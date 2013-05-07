@@ -16,6 +16,21 @@
 
   .footer-attribution {
     font-size: 0.625em;
+    
+    color: $off-white;
+    text-shadow: 0 -1px 1px darken($dark-grey, 10%);
+    
+    a {
+      color: $off-white;
+      
+      &:hover {
+        color: $orange;
+      }
+      
+      &:active {
+        color: lighten($orange, 10%)
+      }
+    }
   }
 
-} // .m-footer
+}
