@@ -19,6 +19,8 @@
     
     a {
       color: $purple;
+      font-size: 0.875em;
+      font-weight: 700;
           
       &:hover {
         color: darken($purple, 10%);
