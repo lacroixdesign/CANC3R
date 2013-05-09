@@ -32,13 +32,13 @@
             li = link_to icon("e000"), "https://twitter.com/CANC3Rtshirts", target: "_blank"
             li = link_to icon("e001"), "https://www.facebook.com/CANC3Rtshirts", target: "_blank"
             li = link_to icon("e002"), "http://instagram.com/CANC3Rtshirts", target: "_blank"
-            li = mail_to "jeremy@amb3r.com", icon("e005")
+            li = mail_to "info@CANC3R.com", icon("e005")
         a#learn-more.btn href="#mission" Learn More
       
   / Mission
   section#mission.m-mission
     .l-constrained
-      h2 Mission
+      h2.row Mission
       .mission-statement
         .mission-logo = image_tag "mission.svg", alt: "3 Part Mission"
         .mission-parts
@@ -47,12 +47,18 @@
             li Raise Awareness
             li Fund Research
       .mission-copy
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+        .mission-left
+          p As a cancer survivor of almost 2 years, I understand the financial burden treatment can bring, with or without insurance. When a person is going through treatment, they need to concentrate on getting better.  The financial burden can be very stressful and that does not help the situation at all.
+          p With my experience in the apparel business and seeing first-hand how t-shirts can positively raise funds and build awareness, I wanted to utilize my expertise to make an impact directly.
+        .mission-right  
+          p CANC3R.org was birthed from this stress and seeks to assist in relieving some pressure from others.  With the help of family, friends, and the community, we can raise awareness and support for this cause that affects so many of us.
+          p.sig - Jeremy Picker, <em> Cancer Survivor </em>
+
   
   / Campaign
   section#campaign.m-campaign
     .l-constrained
-      h2 Campaign
+      h2.row Campaign
       h1 Chase Lovelace
       h3 Drummer - Superchick
       .campaign-profile
@@ -71,14 +77,14 @@
   / Giving
   section#giving.m-giving
     .l-constrained
-      h2 Giving
+      h2.row Giving
       h1 Help Us Reach Our Goal
       h3 Spread The Word
 
   / Connect 
   section#connect.m-connect
     .l-constrained
-      h2 Connect
+      h2.row Connect
       h1 Stay Up TO Date
       h3 Your Information Stays Private
       .connect-signup
@@ -87,14 +93,14 @@
           li = link_to icon("e000"), "https://twitter.com/CANC3Rtshirts", target: "_blank"
           li = link_to icon("e001"), "https://www.facebook.com/CANC3Rtshirts", target: "_blank"
           li = link_to icon("e002"), "http://instagram.com/CANC3Rtshirts", target: "_blank"
-          li = mail_to "jeremy@amb3r.com", icon("e005")
+          li = mail_to "info@CANC3R.com", icon("e005")
       .connect-details
-        #{link_to "Privacy Policy", "http://amb3r.com", target: "_blank"} • #{mail_to "jeremy@amb3r.com", "Contact Us"}
+        #{link_to "Privacy Policy", "http://www.amb3r.com/privacy-policy-and-terms-of-service/", target: "_blank"} • #{mail_to "info@CANC3R.com", "Contact Us"}
         
   / Footer
   section#footer.m-footer
     .l-constrained
-      .footer-logo = image_tag "1pagesites_logo.svg", alt: "1 Page Sites"
+      .footer-logo = link_to image_tag("1pagesites_logo.svg", alt: "1 Page Sites"), "http://1pagesites.net", target: "_blank"
       p.footer-attribution Designed &amp; Developed by #{link_to "LaCroix Design Co.", "http://www.lacroixdesign.net", target: "_blank"}
 
        

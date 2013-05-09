@@ -41,11 +41,21 @@
   
   .mission-copy {
   
-    p {
+    .mission-left {
       @include media-ie($breakpoint-desktop) {
-        @include span-columns(8);
-          @include shift(2);
+        @include span-columns(6);
+        text-align: left;
       }
+    }
+    .mission-right {
+      @include media-ie($breakpoint-desktop) {
+        @include span-columns(6);
+        text-align: left;
+      }
+    }
+    
+    .sig {
+      font-weight: 700;
     }
   }
 }
