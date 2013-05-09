@@ -48,9 +48,9 @@
   }
   
   .campaign-copy {
+    text-align: left;
     @include media-ie($breakpoint-ipad) {
       @include span-columns(8);
-      text-align: left;
     }
   }
 

@@ -40,17 +40,16 @@
   }
   
   .mission-copy {
+    text-align: left;
   
     .mission-left {
       @include media-ie($breakpoint-desktop) {
         @include span-columns(6);
-        text-align: left;
       }
     }
     .mission-right {
       @include media-ie($breakpoint-desktop) {
         @include span-columns(6);
-        text-align: left;
       }
     }
     
