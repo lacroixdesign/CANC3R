@@ -12,8 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.touch-punch.min
-//= require jquery.cookie
-//= require outdated-browser
-//= require scripts
+//= require svgeezy
+//= require jquery.scrollTo.min
+//= require jquery.localScroll.min
+//= require mailcheck.min
+//= require_tree ./components
 //= require_self
