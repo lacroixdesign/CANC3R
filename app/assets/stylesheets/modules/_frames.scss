@@ -1,0 +1,12 @@
+.m-photo-frame {
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.5em solid $off-white;
+  box-shadow: 0 0 0.25em rgba($dark-grey, 0.25);
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+} // .m-photo-frame

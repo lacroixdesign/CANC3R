@@ -1,4 +1,4 @@
-- title ["PAGE TITLE"]
+- title []
 
 - cache expires_in: 1.day do
 
@@ -64,7 +64,7 @@
       h1 Chase Lovelace
       h3 Drummer - Superchick
       .campaign-profile
-        .campaign-image = image_tag "chase.jpg", alt: "Chase Lovelace"
+        .campaign-photo.m-photo-frame = image_tag "chase.jpg", alt: "Chase Lovelace"
         .campaign-meta
           .campaign-site = link_to "Donate Directly at ChaseLovelace.org", "http://chaselovelace.org/", target: "_blank"
       .campaign-copy
