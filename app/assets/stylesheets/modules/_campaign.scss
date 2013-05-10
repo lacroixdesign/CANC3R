@@ -3,16 +3,18 @@
   background: $light-grey;
   
   .campaign-profile {
-    @include media-ie($breakpoint-ipad) {
-      @include span-columns(4);
-    }
-    
+
     img {
       width: 100%;
       border: .5em solid $off-white;
       @include box-shadow(0 0 0.25em rgba($dark-grey, 0.25));
     }
-  }
+
+    @include media-ie($breakpoint-ipad) {
+      @include span-columns(4);
+    }
+    
+  } // .campaign-profile
   
   .campaign-meta {
     color: $purple;
@@ -27,31 +29,36 @@
       }
           
       &:active {
-        color: lighten($purple, 10%)
+        color: lighten($purple, 10%);
       }
-    }
+
+    } // a
 
     
     .campaign-social {
+
       ul {
-        margin: 0.25em 0 2em 0;
         display: block;
         list-style: none;
+        margin: 0.25em 0 2em 0;
       }
       
       li {
-        margin: 0 0.5em;
         display: inline-block;
-        
+        margin: 0 0.5em;
       }
-    }      
-  }
+
+    } // .campaign-social
+
+  } // .campaign-meta
   
   .campaign-copy {
     text-align: left;
+
     @include media-ie($breakpoint-ipad) {
       @include span-columns(8);
     }
-  }
 
-}
+  } // .campaign-copy
+
+} // .m-campaign

@@ -2,59 +2,55 @@
   padding: 2em 0;
   
   .mission-statement {
-    display: inline-block;
-    @include media-ie($breakpoint-ipad) {
-      @include row;
-      max-width: 25em;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  
+    @include row;
+    max-width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+
     .mission-logo {
+
       @include media-ie($breakpoint-ipad) {
-        @include span-columns (4)
+        @include span-columns(4);
       }
-      
-      img {
-      }
-    }
-    
+
+    } // .mission-logo
+
     .mission-parts {
-      @include media-ie($breakpoint-ipad) {
-        @include span-columns (8)
-      }
-    
+
       ol {
         margin-top: 0.5em;
-        text-align: left;
         font-family: $typeface-condensed;
         font-size: 2em;
+        line-height: 100%;
+        text-align: left;
         text-transform: uppercase;
-        line-height: 100%
       }
       
       li {
         margin: 0;
       }
-    }
-  }
+
+      @include media-ie($breakpoint-ipad) {
+        @include span-columns(8);
+      }
+
+    } // .mission-parts
+
+  } // .mission-statement
   
   .mission-copy {
     text-align: left;
-  
-    .mission-left {
-      @include media-ie($breakpoint-desktop) {
-        @include span-columns(6);
-      }
-    }
-    .mission-right {
-      @include media-ie($breakpoint-desktop) {
-        @include span-columns(6);
-      }
-    }
     
-    .sig {
+    .mission-sig {
       font-weight: 700;
     }
-  }
-}
+
+    @include media-ie($breakpoint-desktop) {
+      .mission-copy-half {
+        @include span-columns(6);
+      }
+    }
+
+  } // .mission-copy
+
+} // .m-mission

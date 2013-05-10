@@ -1,12 +1,11 @@
 // Basic Elements
 body {
-  $max-width: 1200px;
   background: $off-white;
   color: $dark-grey;
   font-family: $typeface-sans;
+  font-size: 125%;
   text-align: center;
   text-shadow: 1px 0px 1px $white;
-  font-size: 125%
 }
 
 a, a:visited {
@@ -28,23 +27,23 @@ p, a, h1, h2, h3, h4, h5, label {
 
 h1 {
   margin: 0;
-  line-height: 100%;
   font-size: 2em;
+  line-height: 100%;
   font-weight: 400;
   font-family: $typeface-condensed;
   text-transform: uppercase;
 }
 
 h2 {
-  margin-bottom: 1em;
-  color: $grey;
   display: inline-block;
+  margin-bottom: 1em;
   border: 2px solid $grey;
   border-left: none;
   border-right: none;
+  color: $grey;
   font-size: 1em;
-  text-transform: uppercase;
   line-height: 1.45;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -55,8 +54,8 @@ h3 {
 }
 
 h4 {
-  font-size: 1em;
   margin: 0 0 0.5em 0;
+  font-size: 1em;
 }
 
 h5 {

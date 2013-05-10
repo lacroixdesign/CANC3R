@@ -15,9 +15,8 @@
   } // .footer-logo
 
   .footer-attribution {
-    font-size: 0.625em;
-    
     color: $off-white;
+    font-size: 0.625em;
     text-shadow: 0 -1px 1px darken($dark-grey, 10%);
     
     a {
@@ -28,9 +27,11 @@
       }
       
       &:active {
-        color: lighten($orange, 10%)
+        color: lighten($orange, 10%);
       }
-    }
-  }
 
-}
+    } // a
+
+  } // .footer-attribution
+
+} // .m-footer

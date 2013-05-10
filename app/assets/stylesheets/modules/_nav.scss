@@ -13,11 +13,13 @@
   
   .nav-logo {
     @include span-columns(1);
-  padding: 0.375em 0 0 0;
+    padding: 0.375em 0 0 0;
+
     img {
-    max-height: 1.5em;
+      max-height: 1.5em;
     }
-  }
+
+  } // .nav-logo
 
   ul {
     @include unstyled-list;
@@ -42,12 +44,7 @@
     &:active {
       color: lighten($orange, 10%)
     }
-  }
 
-  @include media($breakpoint-ipad) {
-  }
+  } // a
 
-  @include media($breakpoint-desktop) {
-
-  }
-}
+} // .m-nav
