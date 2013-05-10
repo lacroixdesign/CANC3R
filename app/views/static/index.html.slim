@@ -10,7 +10,7 @@
         ul
           li = link_to "Mission", "#mission"
           li = link_to "Campaign", "#campaign"
-          li = link_to "Giving", "#giving"
+          li = link_to "Share", "#share"
           li = link_to "Connect", "#connect"
           li = link_to "Shop", "http://www.storenvy.com/CANC3Rtshirts", target: "_blank"
   
@@ -33,7 +33,9 @@
             li = link_to icon("e001"), "https://www.facebook.com/CANC3Rtshirts", target: "_blank"
             li = link_to icon("e002"), "http://instagram.com/CANC3Rtshirts", target: "_blank"
             li = mail_to "info@CANC3R.com", icon("e005")
-        a#learn-more.btn href="#mission" Learn More
+        a.btn href="http://canc3r.storenvy.com" Shop Now
+        .intro-learn 
+          a href="#mission" or Learn More
       
   / Mission
   section#mission.m-mission
@@ -71,9 +73,9 @@
         p I wouldn’t be “me” without my family and their tremendous support.  
         
   / Giving
-  section#giving.m-giving
+  section#share.m-share
     .l-constrained
-      h2 Giving
+      h2 Share
       h1 Help Us Reach Our Goal
       h3 Spread The Word
 
