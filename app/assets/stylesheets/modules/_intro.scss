@@ -1,110 +1,147 @@
+// Intro
 .m-intro {
   padding: 4em 0;
   border-bottom: 0.5em solid $purple;
   background: $dark-grey image-url("canc3r_bg.jpg") no-repeat center center;
   color: $off-white;
 
-  .intro-tees {
-
-    ul {
-      display: block;
-      list-style: none;
-      margin: 0;
-    }
-
-    li {
-      display: inline-block;
-      width: 33.33%;
-
-      &:hover {
-        @include transform(scale(1.125));
-      }
-
-    } // li
-
-    img {
-      width: 100%;
-    }
-
-    @include media-ie($breakpoint-desktop) {
-      @include span-columns(8);
-      @include shift(2);
-    }
-
-  } // .intro-tees
-
-  .intro-copy {
-    text-shadow: 0 -1px 1px rgba($dark-grey, 0.75);
-
-    .intro-social {
-
-      ul {
-        display: block;
-        list-style: none;
-        margin: 0 0 2em 0;
-      }
-
-      li {
-        display: inline-block;
-        margin: 0 0.5em;
-        font-size: 1.25em;
-
-        a {
-          color: $off-white;
-
-          &:hover {
-            color: $orange;
-          }
-          &:active {
-            color: lighten($orange, 10%);
-          }
-
-        } // a
-
-      } // li
-
-    } // .intro-social
-
-    .intro-learn {
-      display: block;
-      margin: 0.75em 0 0 0;
-      color: $off-white;
-      font-size: 0.875em;
-      font-style: italic;
-
-      a {
-        color: $off-white;
-      }
-
-      a:hover,
-      a:active {
-        // color: $off-white;
-        color: darken($off-white, 10);
-        text-decoration: underline;
-      }
-
-    } // .intro-learn
-
-    @include media-ie($breakpoint-ipad) {
-      @include span-columns(10);
-      @include shift(1);
-
-      h1 {
-        font-size: 3em;
-      }
-
-    } // @media $breakpoint-ipad
-
-    @include media-ie($breakpoint-desktop) {
-      @include span-columns(8);
-      @include shift(2);
-
-      h1 {
-        font-size: 4em;
-      }
-
-    } // @media $breakpoint-desktop
-
-  } // .intro-copy
+  @include media-ie($breakpoint-ipad) {
+    padding-top: 5em;
+  }
 
 } // .m-intro
+
+
+// Intro Tees
+.m-intro-tees {
+  max-width: 38em;
+  margin: 0 auto 0.5em;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .intro-tees-overlay {
+    position: absolute;
+    display: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 75%;
+
+    [class*="btn"] {
+      box-shadow: 0 1px 5px rgba(0,0,0,0.25);
+    }
+
+  } // .intro-tees-overlay
+
+  li {
+    position: relative;
+    display: inline-block;
+    width: 33.33%;
+    margin: 0 0 0 -10%;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      z-index: 2;
+
+      img {
+        @include transform(scale(1.05));
+      }
+
+      .intro-tees-overlay {
+        display: block;
+      }
+
+    } // &:hover
+
+  } // li
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+} // .intro-tees
+
+
+// Intro Copy
+.m-intro-copy {
+  text-shadow: 0 -1px 1px rgba($dark-grey, 0.75);
+
+  .intro-copy-learn {
+    display: block;
+    margin: 0.75em 0 0 0;
+    color: $off-white;
+    font-size: 0.875em;
+    font-style: italic;
+
+    a {
+      color: $off-white;
+    }
+
+    a:hover,
+    a:active {
+      color: darken($off-white, 10);
+      text-decoration: underline;
+    }
+
+  } // .intro-copy-learn
+
+  @include media-ie($breakpoint-ipad) {
+    @include span-columns(10);
+    @include shift(1);
+
+    h1 {
+      font-size: 3em;
+    }
+
+  } // @media $breakpoint-ipad
+
+  @include media-ie($breakpoint-desktop) {
+    @include span-columns(8);
+    @include shift(2);
+
+    h1 {
+      font-size: 4em;
+    }
+
+  } // @media $breakpoint-desktop
+
+} // .intro-copy
+
+
+// Intro Social
+.m-intro-social {
+
+  ul {
+    display: block;
+    list-style: none;
+    margin: 0 0 2em 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 0.5em;
+    font-size: 1.25em;
+
+    a {
+      color: $off-white;
+
+      &:hover {
+        color: $purple;
+      }
+      &:active {
+        color: lighten($purple, 4);
+      }
+
+    } // a
+
+  } // li
+
+} // .intro-social

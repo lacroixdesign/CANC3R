@@ -16,25 +16,27 @@
 
   / Intro
   section#intro.m-intro
+    .m-intro-tees
+      ul
+        - @tees.each do |tee|
+          li
+            = link_to "http://canc3r.storenvy.com/products/#{tee[:slug]}", target: "_blank" do
+              = image_tag tee[:image], alt: tee[:alt]
+            .intro-tees-overlay
+              a.btn-alt href="http://canc3r.storenvy.com/products/#{tee[:slug]}" target="_blank" Purchase
     .l-constrained
-      .intro-tees
-        ul
-          li = link_to image_tag("drum-tee.png", alt: "Beat Cancer Rock Tee"), "http://canc3r.storenvy.com/products/1286516-beat-cancer-rock-t-shirt", target: "_blank"
-          li = link_to image_tag("mic-tee.png", alt: "Music Speaks Tee"), "http://canc3r.storenvy.com/products/1435182-music-speaks-t-shirt", target: "_blank"
-          li = link_to image_tag("fighter-tee.png", alt: "The Spirt of a Fighter Tee"), "http://canc3r.storenvy.com/products/1435354-the-spirt-of-a-fighter-t-shirt", target: "_blank"
-      .intro-copy
+      .m-intro-copy
         h1 Let's Beat Cancer Together
         h5 Cancer affects too many people that we care about. The expense of treatment is often too much for a single person to bear. However when we band together, we can help.
-        h4
-          a href="http://canc3r.storenvy.com" target="_blank" Show your support and buy a shirt. &rarr;
-        .intro-social
+        h4: a href="http://canc3r.storenvy.com" target="_blank" Show your support and buy a shirt. &rarr;
+        .m-intro-social
           ul
             li = link_to icon("e000"), "https://twitter.com/CANC3Rtshirts", target: "_blank"
             li = link_to icon("e001"), "https://www.facebook.com/CANC3Rtshirts", target: "_blank"
             li = link_to icon("e002"), "http://instagram.com/CANC3Rtshirts", target: "_blank"
             li = mail_to "info@CANC3R.com", icon("e005")
         a.btn-primary href="http://canc3r.storenvy.com" Shop Now
-        .intro-learn
+        .intro-copy-learn
           a href="#mission" or Learn More
 
   / Mission

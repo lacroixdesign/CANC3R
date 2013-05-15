@@ -1,5 +1,6 @@
 // Basic Elements
 body {
+  @include ie-width;
   background: $off-white;
   color: $dark-grey;
   font-family: $typeface-sans;
@@ -9,16 +10,16 @@ body {
 }
 
 a, a:visited {
-  @include transition (all 0.2s ease-in-out);
+  @include transition(all 0.2s ease-in-out);
   color: $orange;
 }
 
 a:hover {
-  color: darken($orange, 10%);
+  color: darken($orange, 5);
 }
 
 a:active {
-  color: lighten($orange, 10%);
+  color: lighten($orange, 5);
 }
 
 p, a, h1, h2, h3, h4, h5, label {
