@@ -1,0 +1,15 @@
+#newsletter-form ng-controller="NewsletterController"
+  form(name="newsletterForm" ng-submit="submit($event)" jq-show="!sent" jq-options="{type: 'slide', duration: 500}" novalidate)
+
+    input(type="text" name="email" placeholder="Your Email Address" ng-model="model.email" required ng-pattern="validEmail" ng-change="suggestEmail()")
+    button.btn-primary type="submit" ng-disabled="sending" Submit
+
+    .form-input-error ng-show="newsletterForm.email.$dirty && newsletterForm.email.$error.required" style="display: none;" Email Address Required
+    .form-input-error ng-show="newsletterForm.email.$dirty && newsletterForm.email.$error.pattern" style="display: none;" Invalid email address
+    .form-input-error ng-show="responseError" style="display: none;" ng-bind-html-unsafe="responseError"
+    .form-input-suggestion ng-show="emailSuggestion" style="display: none;"
+      a href="#email-suggestion" ng-click="useSuggestion($event)" Did you mean <strong>{{emailSuggestion}}</strong>?
+
+
+  .signup-form-response jq-show="sent" jq-options="{duration: 1000}" style="display: none;"
+    p Almost done! Check your email to confirm your subscription.

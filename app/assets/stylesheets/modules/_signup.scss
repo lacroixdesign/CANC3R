@@ -1,0 +1,76 @@
+.m-signup {
+  margin-bottom: 1em;
+  color: $white;
+
+  form {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    display: inline-block;
+    max-width: 20em;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+    background: lighten($purple, 15);
+    color: $white;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+
+    @include placeholder {
+      color: $white;
+      font-family: $typeface-sans;
+    }
+
+  } // input
+
+  [class*="btn"] {
+    margin-bottom: 0.5em;
+  }
+
+  .form-input-error {
+    a { text-decoration: underline; }
+  }
+
+  .form-input-error,
+  .form-input-suggestion {
+    color: lighten($purple, 25);
+    font-size: 75%;
+    font-weight: bold;
+
+    a,
+    a:visited {
+      color: inherit;
+    }
+
+    a:hover {
+      color: lighten($purple, 25);
+    }
+
+  } // .form-input-error, .form-input-suggestion
+
+  .form-input-suggestion {
+    color: $off-white;
+    font-style: italic;
+  }
+
+  .signup-form-response {
+    color: lighten($purple, 25);
+    font-weight: bold;
+    text-align: center;
+  }
+
+  @include media-ie($breakpoint-desktop) {
+    form {
+      width: 75%;
+    }
+  }
+
+  @include media-ie($breakpoint-large-screen) {
+    form {
+      width: 50%;
+    }
+  }
+
+}

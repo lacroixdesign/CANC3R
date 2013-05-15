@@ -4,7 +4,7 @@
   margin: 0;
   border: none;
   border-radius: 3px;
-  box-shadow: 0 0 3px rgba(0,0,0,0.25);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
   background: $bg;
   color: $color;
   font-size: 0.875em;
@@ -16,13 +16,13 @@
   }
 
   &:hover {
-    background: darken($bg, 5);
-    box-shadow: 0 0 5px rgba(0,0,0,0.25);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    background: darken($bg, 4);
   }
 
   &:active {
-    box-shadow: none;
-    background: darken($bg, 10);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    background: darken($bg, 4);
   }
 
   &.large {
@@ -30,8 +30,9 @@
     font-size: 1em;
   }
 
-  &:disabled {
-    background: darken($bg, 20);
+  &:disabled,
+  &[disabled] {
+    @include opacity(0.7);
   }
 
   @content;

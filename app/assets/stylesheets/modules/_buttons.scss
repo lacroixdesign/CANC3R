@@ -1,5 +1,4 @@
-.btn {
-  // @include btn($white, $orange);
+.btn-primary {
   @include btn($orange, $white);
   text-shadow: 0 1px 1px darken($orange, 10);
 }

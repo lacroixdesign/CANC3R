@@ -66,10 +66,24 @@
     } // .intro-social
     
     .intro-learn {
+      display: block;
       margin: 0.75em 0 0 0;
+      color: $off-white;
       font-size: 0.875em;
       font-style: italic;
-    }
+
+      a {
+        color: $off-white;
+      }
+
+      a:hover,
+      a:active {
+        // color: $off-white;
+        color: darken($off-white, 10);
+        text-decoration: underline;
+      }
+
+    } // .intro-learn
 
     @include media-ie($breakpoint-ipad) {
       @include span-columns(10);

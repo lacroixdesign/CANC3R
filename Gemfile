@@ -26,7 +26,7 @@ end
 group :development, :test do
   gem "rspec-rails"
   gem "database_cleaner"
-  gem "dotenv"
+  gem "dotenv-rails"
 end
 
 group :test do
@@ -42,3 +42,5 @@ gem "foreman"
 gem "pg", :group => :production
 gem "unicorn"
 gem "newrelic_rpm"
+gem "active_attr"
+gem "gibbon"   # MailChimp

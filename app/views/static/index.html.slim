@@ -15,7 +15,7 @@
           li = link_to "Shop", "http://canc3r.storenvy.com", target: "_blank"
   
   / Intro
-  section#intro.m-intro(data-resize="1100")
+  section#intro.m-intro
     .l-constrained
       .intro-tees
         ul
@@ -26,14 +26,14 @@
         h1 Let's Beat Cancer Together
         h5 Cancer affects too many people that we care about. The expense of treatment is often too much for a single person to bear. However when we band together, we can help.
         h4
-          a href="#" Click to purchase one of the tees and help make a difference.
+          a href="http://canc3r.storenvy.com" target="_blank" Show your support and buy a shirt. &rarr;
         .intro-social
           ul
             li = link_to icon("e000"), "https://twitter.com/CANC3Rtshirts", target: "_blank"
             li = link_to icon("e001"), "https://www.facebook.com/CANC3Rtshirts", target: "_blank"
             li = link_to icon("e002"), "http://instagram.com/CANC3Rtshirts", target: "_blank"
             li = mail_to "info@CANC3R.com", icon("e005")
-        a.btn href="http://canc3r.storenvy.com" Shop Now
+        a.btn-primary href="http://canc3r.storenvy.com" Shop Now
         .intro-learn 
           a href="#mission" or Learn More
       
@@ -85,7 +85,8 @@
       h2 Connect
       h1 Stay Up TO Date
       h3 Your Information Stays Private
-      .connect-signup
+      .m-signup
+        = render "newsletter_form"
       .connect-social
         ul
           li = link_to icon("e000"), "https://twitter.com/CANC3Rtshirts", target: "_blank"

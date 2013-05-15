@@ -1,0 +1,34 @@
+input[type="tel"],
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  @include input;
+}
+
+textarea {
+  @include input;
+  height: 5em;
+}
+
+.m-form-input {
+  margin-bottom: 1em;
+
+  .form-input-error,
+  .form-input-suggestion {
+    margin-top: 0.25em;
+  }
+
+  .form-input-error {
+    font-size: 85%;
+  }
+
+  .form-input-suggestion {
+    font-size: 90%;
+    font-style: italic;
+  }
+
+} // .m-form-input
+
+.form-actions {
+  @include clearfix;
+}
