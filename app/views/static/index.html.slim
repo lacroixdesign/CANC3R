@@ -6,14 +6,14 @@
   nav#nav.m-nav
     .l-constrained
       .nav-logo = image_tag "logo.svg", alt: "CANC3R"
-      .nav-menu
-        ul
-          li = link_to "Mission", "#mission"
-          li = link_to "Campaign", "#campaign"
-          li = link_to "Share", "#share"
-          li = link_to "Connect", "#connect"
-          li = link_to "Shop", "http://canc3r.storenvy.com", target: "_blank"
-  
+      a.nav-toggle href="#menu" data-behavior="toggle:slide" = icon "e007"
+      ul.m-nav-menu#menu
+        li = link_to "Mission", "#mission"
+        li = link_to "Campaign", "#campaign"
+        li = link_to "Share", "#share"
+        li = link_to "Connect", "#connect"
+        li = link_to "Shop", "http://canc3r.storenvy.com", target: "_blank"
+
   / Intro
   section#intro.m-intro
     .l-constrained
@@ -34,9 +34,9 @@
             li = link_to icon("e002"), "http://instagram.com/CANC3Rtshirts", target: "_blank"
             li = mail_to "info@CANC3R.com", icon("e005")
         a.btn-primary href="http://canc3r.storenvy.com" Shop Now
-        .intro-learn 
+        .intro-learn
           a href="#mission" or Learn More
-      
+
   / Mission
   section#mission.m-mission
     .l-constrained
@@ -52,11 +52,11 @@
         .mission-copy-half
           p As a cancer survivor of almost 2 years, I understand the financial burden treatment can bring, with or without insurance. When a person is going through treatment, they need to concentrate on getting better.  The financial burden can be very stressful and that does not help the situation at all.
           p With my experience in the apparel business and seeing first-hand how t-shirts can positively raise funds and build awareness, I wanted to utilize my expertise to make an impact directly.
-        .mission-copy-half  
+        .mission-copy-half
           p CANC3R.org was birthed from this stress and seeks to assist in relieving some pressure from others.  With the help of family, friends, and the community, we can raise awareness and support for this cause that affects so many of us.
           p.mission-sig - Jeremy Picker, <em>Cancer Survivor</em>
 
-  
+
   / Campaign
   section#campaign.m-campaign
     .l-constrained
@@ -70,8 +70,8 @@
       .campaign-copy
         p Chase Damon Lovelace was born in St. Louis, MO and was raised in Olathe, KS. Around the age of three, he started singing and playing the tambourine in the church choir.   Chase played drums professionally for three different bands since age 21; Stars Go Dim, Pillar, and the band Superchick from 2009 to 2012. He performed all over the United States as well as 4 different continents.
         p In the summer of 2012,  Chase was diagnosed with Stage 4, inoperable cholangiocarcinoma (or bile duct cancer) which arises from the tissue in the bile duct. He was being treated at the Cancer Treatment Center of America in Tulsa, but due to complications from an infection, Chase left this world too soon.
-        p His family has used their faith to stay strong and celebrate the life of their son and brother.  
-        
+        p His family has used their faith to stay strong and celebrate the life of their son and brother.
+
   / Giving
   section#share.m-share
     .l-constrained
@@ -79,7 +79,7 @@
       h1 Help Us Reach Our Goal
       h3 Spread The Word
 
-  / Connect 
+  / Connect
   section#connect.m-connect
     .l-constrained
       h2 Connect
@@ -97,15 +97,9 @@
         = link_to "Privacy Policy", "http://www.amb3r.com/privacy-policy-and-terms-of-service/", target: "_blank"
         |  • 
         = mail_to "info@CANC3R.com", "Contact Us", encode: :hex
-        
+
   / Footer
   section#footer.m-footer
     .l-constrained
       .footer-logo = link_to image_tag("1pagesites_logo.svg", alt: "1 Page Sites"), "http://1pagesites.net", target: "_blank"
       p.footer-attribution Designed &amp; Developed by #{link_to "LaCroix Design Co.", "http://www.lacroixdesign.net", target: "_blank"}
-
-       
-       
-      
-  
-  

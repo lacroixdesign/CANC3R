@@ -1,3 +1,5 @@
 jQuery ->
-  $("#intro").localScroll
+  $("#intro, #menu").localScroll
     hash: true
+    onBefore: ->
+      $("#menu").hide()
