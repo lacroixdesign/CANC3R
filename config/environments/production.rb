@@ -2,7 +2,7 @@ Canc3r::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Sending Email :: Mandrill
-  config.action_mailer.default_url_options = { host: "www.canc3r.com" }
+  config.action_mailer.default_url_options = { host: "www.canc3r.org" }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :port           => '587',
@@ -59,7 +59,7 @@ Canc3r::Application.configure do
   config.logger = Logger.new(STDOUT)
 
   # Use a different cache store in production
-  config.cache_store = :file_store, "tmp/cache_store"
+  config.cache_store = :dalli_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"
