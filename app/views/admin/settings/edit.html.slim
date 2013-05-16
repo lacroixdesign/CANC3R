@@ -11,12 +11,12 @@
 
         .m-admin-form-field
           label Current Funding
-          = text_field_tag "setting[funded]", sprintf("%0.02f", Setting.funded)
+          = text_field_tag "setting[funded]", sprintf("%0.02f", Setting.funded.to_f)
           .admin-form-field-hint Positive numbers only. Example: 2345.67
 
         .m-admin-form-field
           label Funding Goal
-          = text_field_tag "setting[funding_goal]", sprintf("%0.02f", Setting.funding_goal)
+          = text_field_tag "setting[funding_goal]", sprintf("%0.02f", Setting.funding_goal.to_f)
           .admin-form-field-hint Positive numbers only. Example: 2345.67
 
         .m-admin-form-field
