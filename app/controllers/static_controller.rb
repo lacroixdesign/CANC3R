@@ -2,6 +2,11 @@ class StaticController < ApplicationController
 
   # GET /
   def index
+    # Set the money raised as a number (NO dollar $ sign). Cents are optional.
+    #   Ex. 23456.55
+    #   Ex. 54312
+    @money_raised = 23456.55
+    # Tees used in the #intro
     @tees = [
       { image: "drum-tee.png",    alt: "Beat Cancer Rock Tee",       slug: "1286516-beat-cancer-rock-t-shirt" },
       { image: "mic-tee.png",     alt: "Music Speaks Tee",           slug: "1435182-music-speaks-t-shirt" },

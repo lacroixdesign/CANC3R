@@ -1,3 +1,71 @@
+$progress-height: 8px;
+$progress-ratio:  2.5;
+
+// Share Section
 .m-share {
   padding: $section-top-padding 0 $section-bottom-padding;
-}
+
+  h5 {
+    font-size: 0.8125em;
+    text-transform: uppercase;
+  }
+
+} // .m-share
+
+
+// Share Meters
+.m-share-meter {
+  @include row;
+  margin-bottom: 0.5em;
+  color: $grey;
+
+  .share-meter-title {
+    padding-right: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: right;
+
+    small {
+      font-size: 0.75em;
+    }
+
+  } // .share-meter-title
+
+  .share-meter-progress {
+    // Ex. (8px * 2.5 - 8px) / 2
+    $pad: ($progress-height * $progress-ratio - $progress-height) / 2;
+    padding: $pad 0;
+  }
+
+  a {
+    color: inherit;
+  }
+
+} // .m-share-meter
+
+
+// Progress Bar
+.m-progress {
+  width: 100%;
+  height: $progress-height;
+  background: $light-grey;
+
+  .progress-fill {
+    position: relative;
+    width: 0;
+    height: 100%;
+    background: $purple;
+    @include transition(width 1s ease-in-out 2s);
+  }
+
+  .progress-needle {
+    position: absolute;
+    // top: -75%;
+    top: -100% * ($progress-ratio - 1) / 2;
+    right: 0;
+    width: 2px;
+    // height: 250%;
+    height: $progress-ratio * 100%;
+    background: $dark-grey;
+  }
+
+} // .m-progress

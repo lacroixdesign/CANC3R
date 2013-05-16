@@ -1,0 +1,25 @@
+.l-share-meters {
+  max-width: 35em;
+  margin: 1em auto 0;
+
+  .share-meter-title {
+    @include span-columns(3);
+  }
+
+  .share-meter-progress {
+    @include span-columns(9);
+  }
+
+  @include media-ie($breakpoint-ipad) {
+
+    .share-meter-title {
+      @include span-columns(2);
+    }
+
+    .share-meter-progress {
+      @include span-columns(10);
+    }
+
+  } // @media-ie($breakpoint-ipad)
+
+} // .l-share-meters

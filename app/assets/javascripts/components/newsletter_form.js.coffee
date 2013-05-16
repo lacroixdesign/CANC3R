@@ -1,12 +1,12 @@
 ##
 # App
-# 
+#
 newsletterForm = angular.module 'NewsletterForm', ['lacroix.forms']
 
 
 ##
 # Project Starter Controller
-# 
+#
 newsletterForm.controller "NewsletterController", ["$scope", "$element", "submitForm", "suggestEmail", "useSuggestion", "emailRegex", ($scope, $element, submitForm, suggestEmail, useSuggestion, emailRegex) ->
 
   $scope.submit = ->
@@ -29,6 +29,6 @@ newsletterForm.controller "NewsletterController", ["$scope", "$element", "submit
 
 ##
 # Init App
-# 
+#
 jQuery ->
   angular.bootstrap '#newsletter-form', ['NewsletterForm']
