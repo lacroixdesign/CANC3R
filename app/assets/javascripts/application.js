@@ -14,9 +14,10 @@
 //= require jquery_ujs
 //= require svgeezy
 //= require angular.min
+//= require mailcheck.min
 //= require jquery.scrollTo.min
 //= require jquery.localScroll.min
-//= require mailcheck.min
+//= require jquery.fittext
 //= require angular_form.js
 //= require_tree ./components
 //= require_self

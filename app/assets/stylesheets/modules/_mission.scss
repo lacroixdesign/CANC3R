@@ -1,46 +1,10 @@
+// Mission Section
 .m-mission {
   padding: 2em 0;
-  
-  .mission-statement {
-    @include row;
-    max-width: 25em;
-    margin-left: auto;
-    margin-right: auto;
 
-    .mission-logo {
-
-      @include media-ie($breakpoint-ipad) {
-        @include span-columns(4);
-      }
-
-    } // .mission-logo
-
-    .mission-parts {
-
-      ol {
-        margin-top: 0.5em;
-        font-family: $typeface-condensed;
-        font-size: 2em;
-        line-height: 100%;
-        text-align: left;
-        text-transform: uppercase;
-      }
-      
-      li {
-        margin: 0;
-      }
-
-      @include media-ie($breakpoint-ipad) {
-        @include span-columns(8);
-      }
-
-    } // .mission-parts
-
-  } // .mission-statement
-  
   .mission-copy {
     text-align: left;
-    
+
     .mission-sig {
       font-weight: 700;
     }
@@ -54,3 +18,46 @@
   } // .mission-copy
 
 } // .m-mission
+
+
+// Mission Statement
+.m-mission-statement {
+  @include row;
+  max-width: 16em;
+  margin: 0 auto 1.25em;
+
+  .mission-statement-list {
+    padding-top: 0.5em;
+    margin: 0 auto;
+    font-family: $typeface-condensed;
+    font-size: 1.75em;
+    line-height: 100%;
+    text-align: left;
+    text-transform: uppercase;
+
+    ol {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    li {
+      margin: 0;
+    }
+
+  } // .mission-statement-list
+
+  @include media-ie(550px) {
+    max-width: 25em;
+
+    .mission-statement-logo {
+      @include span-columns(4);
+    }
+
+    .mission-statement-list {
+      @include span-columns(8);
+      font-size: 2em;
+    }
+
+  } // @media-ie($breakpoint-ipad)
+
+} // .mission-statement

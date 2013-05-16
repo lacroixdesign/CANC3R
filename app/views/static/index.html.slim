@@ -14,6 +14,7 @@
         li = link_to "Connect", "#connect"
         li = link_to "Shop", "http://canc3r.storenvy.com", target: "_blank"
 
+
   / Intro
   section#intro.m-intro
     .m-intro-tees
@@ -39,13 +40,14 @@
         .intro-copy-learn
           a href="#mission" or Learn More
 
+
   / Mission
   section#mission.m-mission
     .l-constrained
       h2 Mission
-      .mission-statement
-        .mission-logo = image_tag "mission.svg", alt: "3 Part Mission"
-        .mission-parts
+      .m-mission-statement
+        .mission-statement-logo = image_tag "mission.svg", alt: "3 Part Mission"
+        .mission-statement-list
           ol
             li Finance Treatment
             li Raise Awareness
@@ -74,12 +76,14 @@
         p In the summer of 2012,  Chase was diagnosed with Stage 4, inoperable cholangiocarcinoma (or bile duct cancer) which arises from the tissue in the bile duct. He was being treated at the Cancer Treatment Center of America in Tulsa, but due to complications from an infection, Chase left this world too soon.
         p His family has used their faith to stay strong and celebrate the life of their son and brother.
 
+
   / Giving
   section#share.m-share
     .l-constrained
       h2 Share
       h1 Help Us Reach Our Goal
       h3 Spread The Word
+
 
   / Connect
   section#connect.m-connect
@@ -99,6 +103,7 @@
         = link_to "Privacy Policy", "http://www.amb3r.com/privacy-policy-and-terms-of-service/", target: "_blank"
         |  • 
         = mail_to "info@CANC3R.com", "Contact Us", encode: :hex
+
 
   / Footer
   section#footer.m-footer
