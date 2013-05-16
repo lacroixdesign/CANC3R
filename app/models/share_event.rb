@@ -9,7 +9,7 @@ class ShareEvent < ActiveRecord::Base
   end
 
   def self.percent_to_goal
-    count = self.current_count
+    count = self.count
     goal  = self.goal
     if count.blank? || count == 0 || goal == 0
       0

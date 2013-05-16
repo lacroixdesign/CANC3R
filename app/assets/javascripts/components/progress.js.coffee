@@ -46,7 +46,7 @@ facebookProgress.controller "FacebookProgressController", ["$scope", "$element",
     $event.preventDefault()
     obj =
       method:  "feed"
-      link:    "http://www.canc3r.org"
+      link:    "http://www.CANC3R.org"
       picture: image
       name:    "CANC3R"
       caption: "Let's Beat Cancer Together!"
