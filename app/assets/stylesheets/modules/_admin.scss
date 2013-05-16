@@ -2,6 +2,16 @@
 .m-admin {
   margin: 1em;
   text-align: left;
+
+  .admin-sublinks {
+    font-size: 0.75em;
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+  } // .admin-sublinks
+
 } // .m-admin
 
 
