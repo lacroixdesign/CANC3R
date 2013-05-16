@@ -3,7 +3,7 @@ class FacebookEvent < ShareEvent
 private
 
   def self.goal
-    @goal ||= 150.0
+    Setting.facebook_goal.to_f
   end
 
 end

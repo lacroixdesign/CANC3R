@@ -44,3 +44,4 @@ gem "unicorn"
 gem "newrelic_rpm"
 gem "active_attr"
 gem "gibbon"   # MailChimp
+gem "rails-settings-cached", "0.2.4"

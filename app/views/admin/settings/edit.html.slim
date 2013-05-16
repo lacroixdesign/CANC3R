@@ -1,0 +1,33 @@
+- title ["Edit Settings", "Admin"]
+
+.m-admin
+  .l-admin-form
+    h1 Settings
+    .m-admin-form
+
+      = render "shared/alerts", flash: flash
+
+      = form_tag [:admin, Setting.new] do
+
+        .m-admin-form-field
+          label Current Funding
+          = text_field_tag "setting[funded]", sprintf("%0.02f", Setting.funded)
+          .admin-form-field-hint Positive numbers only. Example: 2345.67
+
+        .m-admin-form-field
+          label Funding Goal
+          = text_field_tag "setting[funding_goal]", sprintf("%0.02f", Setting.funding_goal)
+          .admin-form-field-hint Positive numbers only. Example: 2345.67
+
+        .m-admin-form-field
+          label Facebook Goal
+          = text_field_tag "setting[facebook_goal]", Setting.facebook_goal
+          .admin-form-field-hint Positive integers only. Example: 2345
+
+        .m-admin-form-field
+          label Twitter Goal
+          = text_field_tag "setting[twitter_goal]", Setting.twitter_goal
+          .admin-form-field-hint Positive integers only. Example: 2345
+
+        .admin-form-actions
+          button.btn-alt type="submit" Save Settings

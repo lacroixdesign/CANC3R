@@ -1,0 +1,9 @@
+- unless flash.blank?
+
+  .m-alerts
+
+    - if flash[:alert]
+      .alert.alert-error = flash.alert
+
+    - if flash[:notice]
+      .alert.alert-success = flash.notice

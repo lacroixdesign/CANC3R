@@ -11,7 +11,7 @@ class ShareEvent < ActiveRecord::Base
   def self.percent_to_goal
     count = self.current_count
     goal  = self.goal
-    if count.blank? || count == 0
+    if count.blank? || count == 0 || goal == 0
       0
     elsif count >= goal
       100
@@ -23,11 +23,11 @@ class ShareEvent < ActiveRecord::Base
 private
 
   def self.goal
-    @goal ||= 200.0
+    200.0
   end
 
   def expire_cache
-    Rails.cache.delete "home"
+    CacheManager.expire_home
   end
 
 end

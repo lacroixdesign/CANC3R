@@ -89,10 +89,10 @@
       .l-share-meters
 
         / Funds
-        - percent = @money_raised / 30000.0 * 100
+        - percent = Setting.funding_goal ? (Setting.funded / Setting.funding_goal.to_f * 100) : 0
         .m-share-meter id="funds-progress" ng-controller="FundsProgressController" data-percent=percent
           = render layout: "share_meter", locals: { percent: percent } do
-            small = number_to_currency(@money_raised, precision: 0)
+            small = number_to_currency(Setting.funded, precision: 0)
 
         / Facebook
         - percent = FacebookEvent.percent_to_goal

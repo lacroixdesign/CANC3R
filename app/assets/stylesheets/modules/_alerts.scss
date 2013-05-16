@@ -1,0 +1,17 @@
+.m-alerts {
+  margin-bottom: 1em;
+
+  .alert {
+    margin-bottom: 0.5em;
+    font-size: 0.75em;
+  }
+
+  .alert-success {
+    color: $purple;
+  }
+
+  .alert-error {
+    color: $orange;
+  }
+
+}

@@ -3,7 +3,7 @@ class TwitterEvent < ShareEvent
 private
 
   def self.goal
-    @goal ||= 150.0
+    Setting.twitter_goal.to_f
   end
 
 end
