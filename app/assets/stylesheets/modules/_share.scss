@@ -28,6 +28,16 @@ $progress-ratio:  2.5;
       font-size: 0.75em;
     }
 
+    a {
+      display: inline-block;
+      @include transition(color 0.2s ease-in-out);
+    }
+
+    a:hover {
+      color: $orange;
+      @include transform(scale(1.5));
+    }
+
   } // .share-meter-title
 
   .share-meter-progress {
@@ -59,11 +69,9 @@ $progress-ratio:  2.5;
 
   .progress-needle {
     position: absolute;
-    // top: -75%;
     top: -100% * ($progress-ratio - 1) / 2;
     right: 0;
     width: 2px;
-    // height: 250%;
     height: $progress-ratio * 100%;
     background: $dark-grey;
   }
