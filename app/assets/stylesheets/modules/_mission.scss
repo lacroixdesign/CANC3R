@@ -1,6 +1,6 @@
 // Mission Section
 .m-mission {
-  padding: 2em 0;
+  padding: $section-top-padding 0 $section-bottom-padding;
 
   .mission-copy {
     text-align: left;
@@ -10,10 +10,12 @@
     }
 
     @include media-ie($breakpoint-desktop) {
+
       .mission-copy-half {
         @include span-columns(6);
       }
-    }
+
+    } // @media-ie($breakpoint-desktop)
 
   } // .mission-copy
 

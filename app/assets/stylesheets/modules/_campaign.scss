@@ -1,39 +1,39 @@
 .m-campaign {
-  padding: 2em 0;
+  padding: $section-top-padding 0 $section-bottom-padding;
   background: $light-grey;
-  
+
   .campaign-profile {
 
     @include media-ie($breakpoint-ipad) {
       @include span-columns(4);
     }
-    
+
   } // .campaign-profile
 
   .campaign-photo {
     max-width: 20em;
     margin-bottom: 0.5em;
   }
-  
+
   .campaign-meta {
     color: $purple;
-    
+
     a {
       color: $purple;
       font-size: 0.875em;
       font-weight: 700;
-          
+
       &:hover {
         color: darken($purple, 10%);
       }
-          
+
       &:active {
         color: lighten($purple, 10%);
       }
 
     } // a
 
-    
+
     .campaign-social {
 
       ul {
@@ -41,7 +41,7 @@
         list-style: none;
         margin: 0.25em 0 2em 0;
       }
-      
+
       li {
         display: inline-block;
         margin: 0 0.5em;
@@ -50,7 +50,7 @@
     } // .campaign-social
 
   } // .campaign-meta
-  
+
   .campaign-copy {
     text-align: left;
 

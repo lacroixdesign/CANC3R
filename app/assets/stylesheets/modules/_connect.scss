@@ -1,16 +1,16 @@
 .m-connect {
-  padding: 2em 0;
+  padding: $section-top-padding 0 $section-bottom-padding;
   background: $purple;
   color: $off-white;
   text-shadow: 0 -1px 1px darken($purple, 10%);
-  
+
   h2 {
     border: 2px solid $light-grey;
     border-left: none;
     border-right: none;
     color: $light-grey;
   }
-  
+
   .connect-social {
 
     ul {
@@ -18,15 +18,15 @@
       list-style: none;
       margin: 0 0 2em 0;
     }
-      
+
     li {
       display: inline-block;
       margin: 0 0.5em;
       font-size: 1.25em;
-        
+
       a {
         color: $off-white;
-          
+
         &:hover {
           color: $orange;
         }
@@ -39,17 +39,17 @@
     } // li
 
   } // .connect-social
-  
+
   .connect-details {
     font-size: .75em;
-    
+
     a {
       color: $off-white;
-      
+
       &:hover {
         color: darken($off-white, 10%);
       }
-      
+
       &:active {
         color: lighten($off-white, 10%);
       }
