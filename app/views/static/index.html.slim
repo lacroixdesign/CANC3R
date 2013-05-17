@@ -1,4 +1,4 @@
-- title ["Support Cancer Treatment"]
+- title []
 
 - cache "home", expires_in: 1.day do
 
@@ -71,11 +71,12 @@
         .campaign-photo.m-photo-frame = image_tag "chase.jpg", alt: "Chase Lovelace"
         .campaign-meta
           .campaign-site = link_to "Donate Directly at ChaseLovelace.org", "http://chaselovelace.org/", target: "_blank"
+
       .campaign-copy
         p Chase Damon Lovelace was born in St. Louis, MO and was raised in Olathe, KS. Around the age of three, he started singing and playing the tambourine in the church choir.   Chase played drums professionally for three different bands since age 21; Stars Go Dim, Pillar, and the band Superchick from 2009 to 2012. He performed all over the United States as well as 4 different continents.
         p In the summer of 2012,  Chase was diagnosed with Stage 4, inoperable cholangiocarcinoma (or bile duct cancer) which arises from the tissue in the bile duct. He was being treated at the Cancer Treatment Center of America in Tulsa, but due to complications from an infection, Chase left this world too soon.
         p His family has used their faith to stay strong and celebrate the life of their son and brother.
-
+        p <strong>100% of all profits will be given to the Chase Lovelace Special Needs Trust.</strong>
 
   / Giving
   section#share.m-share
@@ -104,7 +105,7 @@
         - percent = TwitterEvent.percent_to_goal
         .m-share-meter id="twitter-progress" ng-controller="TwitterProgressController" data-percent=percent data-url=twitter_events_path
           = render layout: "share_meter", locals: { percent: percent } do
-            a href=tweet_url target="_blank" = icon "e000"
+            a href="http://twitter.com/intent/tweet?url=#{root_url}&text=Let's Beat Cancer Together! Show your support and buy a shirt." target="_blank" = icon "e000"
 
 
   / Connect
@@ -123,7 +124,7 @@
           li = mail_to "info@CANC3R.com", icon("e005")
       .connect-details
         = link_to "Privacy Policy", "http://www.amb3r.com/privacy-policy-and-terms-of-service/", target: "_blank"
-        |  • 
+        |  •
         = mail_to "info@CANC3R.com", "Contact Us", encode: :hex
 
 
