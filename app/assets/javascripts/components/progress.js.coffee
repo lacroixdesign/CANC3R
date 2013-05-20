@@ -56,6 +56,8 @@ facebookProgress.controller "FacebookProgressController", ["$scope", "$element",
       if response? and response.post_id?
         # Create a Facebook share event
         addShareEvent($scope)
+        # Send event to Google Analytics
+        ga('send', 'event', 'Social', 'Share', 'Facebook') if ga?
 
     FB.ui(obj, callback);
 ]
@@ -71,6 +73,9 @@ twitterProgress.controller "TwitterProgressController", ["$scope", "$element", "
       if event and event.type is "tweet"
         # Create a Twitter share event
         addShareEvent($scope)
+        # Send event to Google Analytics
+        ga('send', 'event', 'Social', 'Share', 'Twitter') if ga?
+
     twttr.events.bind('tweet', handleTweetEvent)
 
   $scope.url     = $element.data("url")
