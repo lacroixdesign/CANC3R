@@ -4,10 +4,19 @@
   text-align: left;
 
   .admin-sublinks {
+    @include clearfix;
     font-size: 0.75em;
 
     a:hover {
       text-decoration: underline;
+    }
+
+    .admin-sublinks-left {
+      float: left;
+    }
+
+    .admin-sublinks-right {
+      float: right;
     }
 
   } // .admin-sublinks

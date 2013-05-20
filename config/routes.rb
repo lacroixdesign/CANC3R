@@ -10,6 +10,7 @@ Canc3r::Application.routes.draw do
   namespace :admin do
     root to: "settings#edit"
     resource :settings, only: [:edit, :create]
+    post "clear-home-cache" => "settings#clear_home_cache", as: :clear_home_cache
   end
 
   # Home Page

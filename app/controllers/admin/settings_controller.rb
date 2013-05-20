@@ -25,4 +25,10 @@ class Admin::SettingsController < Admin::ApplicationController
     redirect_to edit_admin_settings_path, notice: "Settings have been successfully updated."
   end
 
+  # POST /clear-home-cache
+  def clear_home_cache
+    CacheManager.expire_home
+    redirect_to edit_admin_settings_path, notice: "Home page cache has been cleared."
+  end
+
 end
