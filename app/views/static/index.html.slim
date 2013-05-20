@@ -105,7 +105,7 @@
         - percent = TwitterEvent.percent_to_goal
         .m-share-meter id="twitter-progress" ng-controller="TwitterProgressController" data-percent=percent data-url=twitter_events_path
           = render layout: "share_meter", locals: { percent: percent } do
-            a href="http://twitter.com/intent/tweet?url=#{root_url}&text=Let's Beat Cancer Together! Show your support and buy a shirt." target="_blank" = icon "e000"
+            a href=tweet_url target="_blank" = icon "e000"
 
 
   / Connect
