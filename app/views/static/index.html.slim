@@ -5,7 +5,7 @@
   / Nav
   nav#nav.m-nav
     .l-constrained
-      .nav-logo = image_tag "logo.svg", alt: "CANC3R"
+      .nav-logo = svg_image_tag "logo", alt: "CANC3R"
       a.nav-toggle href="#menu" data-behavior="toggle:slide" = icon "e007"
       ul.m-nav-menu#menu
         li = link_to "Mission", "#mission"
@@ -46,7 +46,7 @@
     .l-constrained
       h2 Mission
       .m-mission-statement
-        .mission-statement-logo = image_tag "mission.svg", alt: "3 Part Mission"
+        .mission-statement-logo = svg_image_tag "mission", alt: "3 Part Mission"
         .mission-statement-list
           ol
             li Finance Treatment
@@ -132,5 +132,5 @@
   / Footer
   section#footer.m-footer
     .l-constrained
-      .footer-logo = link_to image_tag("1pagesites_logo.svg", alt: "1 Page Sites"), "http://1pagesites.net", target: "_blank"
+      .footer-logo = link_to svg_image_tag("1pagesites_logo", alt: "1 Page Sites"), "http://1pagesites.net", target: "_blank"
       p.footer-attribution Designed &amp; Developed by #{link_to "LaCroix Design Co.", "http://www.lacroixdesign.net", target: "_blank"}

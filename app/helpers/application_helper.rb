@@ -32,6 +32,16 @@ module ApplicationHelper
 
 
   ##
+  # SVG Image tag with a fallback for the Modernizr script
+  #
+  def svg_image_tag filename, options = {}
+    filename.gsub! /\.svg$/i, ""
+    options["data-svg-fallback"] ||= asset_path("#{filename}.png")
+    image_tag "#{filename}.svg", options
+  end
+
+
+  ##
   # Tweet URL
   #
   def tweet_url
