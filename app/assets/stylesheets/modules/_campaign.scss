@@ -1,17 +1,16 @@
-.m-campaign {
+// Section
+.s-campaign {
   padding: $section-top-padding 0 $section-bottom-padding;
   background: $light-grey;
+} // .s-campaign
 
-  .campaign-profile {
-
-    @include media-ie($breakpoint-ipad) {
-      @include span-columns(4);
-    }
-
-  } // .campaign-profile
+// Campaign
+.m-campaign {
+  @include row;
+  margin: 1.5em auto 0;
 
   .campaign-photo {
-    max-width: 20em;
+    max-width: 10em;
     margin-bottom: 0.5em;
   }
 
@@ -53,11 +52,32 @@
 
   .campaign-copy {
     text-align: left;
+  }
 
-    @include media-ie($breakpoint-ipad) {
+  &.mini {
+    max-width: 40em;
+    font-size: 75%;
+  }
+
+  @include media-ie($breakpoint-ipad) {
+
+    .campaign-photo {
+      max-width: 100%;
+    }
+
+    .campaign-profile {
+      @include span-columns(4);
+    }
+
+    .campaign-copy {
       @include span-columns(8);
     }
 
-  } // .campaign-copy
+  } // @include media-ie($breakpoint-ipad)
 
 } // .m-campaign
+
+// Previous campaigns
+.l-previous-campaigns {
+  margin-top: 2em;
+} // .l-previous-campaigns
