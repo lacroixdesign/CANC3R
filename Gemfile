@@ -21,6 +21,7 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
   gem "pry"
+  gem "foreman", :require => false
 end
 
 group :development, :test do
@@ -38,9 +39,8 @@ end
 gem "exception_notification", "2.6.1"
 gem "slim"
 gem "boarding_pass"
-gem "foreman"
 gem "pg", :group => :production
-gem "unicorn"
+gem "puma"
 gem "newrelic_rpm"
 gem "active_attr"
 gem "gibbon"   # MailChimp
