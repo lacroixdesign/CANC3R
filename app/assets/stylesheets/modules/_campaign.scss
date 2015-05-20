@@ -73,11 +73,22 @@
       @include span-columns(8);
     }
 
+    &.mini {
+      @include span-columns(6);
+      @include omega(2n);
+      max-width: none;
+      font-size: 75%
+    }
+
   } // @include media-ie($breakpoint-ipad)
 
 } // .m-campaign
 
 // Previous campaigns
 .l-previous-campaigns {
-  margin-top: 2em;
+  @include row;
 } // .l-previous-campaigns
+
+h1.previous {
+  margin-top: 2em;
+}
