@@ -21,10 +21,10 @@
       ul
         - @tees.each do |tee|
           li
-            = link_to "https://jeremy-picker-gtwt.squarespace.com/store/#{tee[:slug]}", target: "_blank" do
+            = link_to "https://jeremy-picker-gtwt.squarespace.com/#{tee[:slug]}", target: "_blank" do
               = image_tag tee[:image], alt: tee[:alt]
             .intro-tees-overlay
-              a.btn-alt href="https://jeremy-picker-gtwt.squarespace.com/store/#{tee[:slug]}" target="_blank" Purchase
+              a.btn-alt href="https://jeremy-picker-gtwt.squarespace.com/#{tee[:slug]}" target="_blank" Purchase
     .l-constrained
       .m-intro-copy
         h1 Let's Beat Cancer Together
