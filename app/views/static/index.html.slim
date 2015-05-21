@@ -12,7 +12,7 @@
         li = link_to "Campaign", "#campaign"
         li = link_to "Share", "#share"
         li = link_to "Connect", "#connect"
-        li = link_to "Shop", "http://store.canc3r.org/", target: "_blank"
+        li = link_to "Shop", "https://jeremy-picker-gtwt.squarespace.com/?category=CANC3R", target: "_blank"
 
 
   / Intro
@@ -21,22 +21,22 @@
       ul
         - @tees.each do |tee|
           li
-            = link_to "http://store.canc3r.org//products/#{tee[:slug]}", target: "_blank" do
+            = link_to "https://jeremy-picker-gtwt.squarespace.com/store/#{tee[:slug]}", target: "_blank" do
               = image_tag tee[:image], alt: tee[:alt]
             .intro-tees-overlay
-              a.btn-alt href="http://store.canc3r.org//products/#{tee[:slug]}" target="_blank" Purchase
+              a.btn-alt href="https://jeremy-picker-gtwt.squarespace.com/store/#{tee[:slug]}" target="_blank" Purchase
     .l-constrained
       .m-intro-copy
         h1 Let's Beat Cancer Together
         h5 Cancer affects too many people that we care about. The expense of treatment is often too much for a single person to bear. However when we band together, we can help.
-        h4: a href="http://store.canc3r.org/" target="_blank" Show your support and buy a shirt. &rarr;
+        h4: a href="https://jeremy-picker-gtwt.squarespace.com/?category=CANC3R" target="_blank" Show your support and buy a shirt. &rarr;
         .m-intro-social
           ul
             li = link_to icon("e000"), "https://twitter.com/CANC3Rtshirts", target: "_blank"
             li = link_to icon("e001"), "https://www.facebook.com/CANC3Rtshirts", target: "_blank"
             li = link_to icon("e002"), "http://instagram.com/CANC3Rtshirts", target: "_blank"
             li = mail_to "info@CANC3R.com", icon("e005")
-        a.btn-primary href="http://store.canc3r.org/" Shop Now
+        a.btn-primary href="https://jeremy-picker-gtwt.squarespace.com/?category=CANC3R" target="_blank" Shop Now
         .intro-copy-learn
           a href="#mission" or Learn More
 

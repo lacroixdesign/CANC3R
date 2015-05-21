@@ -4,9 +4,9 @@ class StaticController < ApplicationController
   def index
     # Tees used in the #intro
     @tees = [
-      { image: "drum-tee.png",    alt: "Beat Cancer Rock Tee",       slug: "1286516-beat-cancer-rock-t-shirt" },
-      { image: "mic-tee.png",     alt: "Music Speaks Tee",           slug: "1435182-music-speaks-t-shirt" },
-      { image: "fighter-tee.png", alt: "The Spirt of a Fighter Tee", slug: "1435354-the-spirt-of-a-fighter-t-shirt" }
+      { image: "mens.png",    alt: "Men's Purple Fighter Tee",       slug: "copy-of-fighter-tee" },
+      { image: "ladies.png",     alt: "Ladies's Purple Fighter Tee",           slug: "female-purple-fighter-tee" },
+      { image: "childrens.png", alt: "Childrens's Purple Fighter Tee", slug: "youth-purple-fighter-tee" }
     ]
   end
 
