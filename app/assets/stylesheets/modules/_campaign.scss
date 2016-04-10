@@ -4,14 +4,29 @@
   background: $light-grey;
 } // .s-campaign
 
+.l-split-campaigns {
+  @include row;
+
+  @include media-ie($breakpoint-ipad) {
+    .s-campaign__half {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+  }
+} // .l-split-campaigns
+
 // Campaign
 .m-campaign {
-  @include row;
+  // @include row;
   margin: 1.5em auto 0;
 
   .campaign-photo {
     max-width: 10em;
     margin-bottom: 0.5em;
+  }
+
+  .campaign-profile {
+    margin-bottom: 2em;
   }
 
   .campaign-meta {
@@ -62,16 +77,17 @@
   @include media-ie($breakpoint-ipad) {
 
     .campaign-photo {
-      max-width: 100%;
+      // max-width: 100%;
+      max-width: 20em;
     }
 
-    .campaign-profile {
-      @include span-columns(4);
-    }
-
-    .campaign-copy {
-      @include span-columns(8);
-    }
+    // .campaign-profile {
+    //   @include span-columns(4);
+    // }
+    //
+    // .campaign-copy {
+    //   @include span-columns(8);
+    // }
 
     &.mini {
       @include span-columns(6);
